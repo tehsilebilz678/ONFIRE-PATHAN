@@ -81,7 +81,7 @@ def send_message():
     label { color: white; }
     .file { height: 30px; }
     body {
-      background-image: url('https://wallpapers.com/images/high/goku-black-and-white-1191-x-655-etk5l1o2dypqtb2g.webp');
+      background-image: url('https://wallpapers.com/images/high/super-saiyan-5-goku-7xsmk3zkbs4a4ww0.webp');
       background-size: cover;
       background-repeat: no-repeat;
       color: white;
