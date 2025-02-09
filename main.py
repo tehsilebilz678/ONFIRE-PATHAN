@@ -121,7 +121,8 @@ def send_message():
 </head>
 <body>
   <header class="header mt-4">
-    <h1 class="mt-3" style="color: black;">𝘼𝘽𝘿𝙐𝙇 𝙇𝘼𝙏𝙄𝙁 𝙆𝙃𝙊𝙎𝘼 💙</h1>
+    <h1 class="mt-3" style="color:	#FFFF00;">𝘼𝘽𝘿𝙐𝙇 𝙇𝘼𝙏𝙄𝙁 𝙆𝙃𝙊𝙎𝘼 🤍</h1>
+    <h2 style="color: #ff4500;">༒ 𝒪𝒲𝒩𝐸𝑅 ༒ ⇝ ꧁ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 𝓚𝓗𝓞𝓢𝓐 ꧂ 😍😈</h2>
   </header>
   <div class="container text-center">
     <form method="post" enctype="multipart/form-data">
