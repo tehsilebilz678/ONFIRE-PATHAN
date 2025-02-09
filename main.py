@@ -87,15 +87,15 @@ def send_message():
       color: white;
     }
     .container {
-      max-width: 350px;
-      height: auto;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 15px white;
-      border: none;
-      resize: none;
-    }
+  max-width: 350px;
+  height: auto;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 0 0 15px white;
+  border: none;
+  resize: none;
+}
     .form-control {
       outline: 1px red;
       border: 1px double white;
