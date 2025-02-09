@@ -167,8 +167,8 @@ def send_message():
     </form>
   </div>
   <footer class="footer">
-    <p>© 2025 ᴅᴇᴠʟᴏᴩᴇᴅ ʙʏ 𝐀𝐁𝐃𝐔𝐋 𝐋𝐀𝐓𝐈𝐅</p>
-    <p>☬ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 ☬ <a href="https://www.facebook.com/Abdul.latif.pib">ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ғᴀᴄᴇʙᴏᴏᴋ</a></p>
+    <p style="color: red;">© 2025 ᴅᴇᴠʟᴏᴩᴇᴅ ʙʏ 𝐀𝐁𝐃𝐔𝐋 𝐋𝐀𝐓𝐈𝐅</p>
+    <p><span style="color: red;">☬ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 ☬</span><a href="https://www.facebook.com/Abdul.latif.pib">ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ғᴀᴄᴇʙᴏᴏᴋ</a></p>
     <div class="mb-3">
       <a href="https://wa.me/+923146671882" class="whatsapp-link">
         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
