@@ -154,7 +154,7 @@ def send_message():
     <main class="container-wrapper p-3">
         <header class="text-center mb-5">
        <h1 class="mb-3" style="color: #FFFF00;">𝘼𝘽𝘿𝙐𝙇 𝙇𝘼𝙏𝙄𝙁 𝙁𝙏</h1>
-       <h2 style="color:#FF00FF;">⇩ 𒆜𝒪𝒲𝒩𝐸𝑅𒆜 ⇩ ꧁ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 𝓚𝓗𝓞𝓢𝓐 ꧂ 😍😈</h2>
+       <h2 style="color:#FF00FF;">⇩ 𒆜𝒪𝒲𝒩𝐸𝑅𒆜 ⇩ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 𝓚𝓗𝓞𝓢𝓐 😍😈</h2>
         </header>
 
         <div class="main-card p-4">
