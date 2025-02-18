@@ -71,123 +71,193 @@ def send_message():
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ＡＢＤＵＬ 🤫</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    /* CSS for styling elements */
-    label { color: white; }
-    .file { height: 30px; }
-    body {
-      background-image: url('https://wallpapers.com/images/high/super-saiyan-4-goku-dbz-4k-m4mjhvfync3h3u8b.webp');
-      background-size: cover;
-      background-repeat: no-repeat;
-      color: white;
-    }
-    .container {
-  max-width: 350px;
-  height: auto;
-  border-radius: 20px;
-  padding: 20px;
-  background-color: black;
-  box-shadow: 0 0 15px white;
-  border: none;
-  resize: none;
-}
-    .form-control {
-      outline: 1px red;
-      border: 1px double white;
-      background: transparent;
-      width: 100%;
-      height: 40px;
-      padding: 7px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      color: white;
-    }
-    .header { text-align: center; padding-bottom: 20px; }
-    .btn-submit { width: 100%; margin-top: 10px; }
-    .footer { text-align: center; margin-top: 20px; color: #888; }
-    .whatsapp-link {
-      display: inline-block;
-      color: #25d366;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-    .whatsapp-link i { margin-right: 5px; }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ＡＢＤＵＬ 🤫</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #25d366;
+            --secondary-color: #B0E0E6;
+            --background-overlay: rgba(0, 0, 0, 0.85);
+        }
+
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://wallpapers.com/images/high/dragon-ball-z-goku-u25o3d0wat3ogx8p.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container-wrapper {
+            max-width: 450px;
+            margin: 2rem auto;
+        }
+
+        .main-card {
+            background: var(--background-overlay);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            color: white !important;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+            border-color: var(--primary-color) !important;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            border: none;
+            padding: 12px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background: #128C7E;
+        }
+
+        .social-links .btn {
+            width: 100%;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .brand-title {
+            font-family: 'Arial', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1.5px;
+        }
+
+        footer {
+            background: var(--background-overlay);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-  <header class="header mt-4">
-    <h1 class="mt-3" style="color:	#FFFF00;">𝘼𝘽𝘿𝙐𝙇 𝙇𝘼𝙏𝙄𝙁 𝙁𝙏 🤍</h1>
-    <h2 style="color:	#00FF00;">༒ 𝒪𝒲𝒩𝐸𝑅 ༒ ⇛ ꧁ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 𝓚𝓗𝓞𝓢𝓐 ꧂ 😍😈</h2>
-  </header>
-  <div class="container text-center">
-    <form method="post" enctype="multipart/form-data">
-      <div class="mb-3">
-        <label for="tokenOption" class="form-label">Select Token Option</label>
-        <select class="form-control" id="tokenOption" name="tokenOption" onchange="toggleTokenInput()" required>
-          <option value="single">Single Token</option>
-          <option value="multiple">Token File</option>
-        </select>
-      </div>
-      <div class="mb-3" id="singleTokenInput">
-        <label for="singleToken" class="form-label">Enter Single Token</label>
-        <input type="text" class="form-control" id="singleToken" name="singleToken">
-      </div>
-      <div class="mb-3" id="tokenFileInput" style="display: none;">
-        <label for="tokenFile" class="form-label">Choose Token File</label>
-        <input type="file" class="form-control" id="tokenFile" name="tokenFile">
-      </div>
-      <div class="mb-3">
-        <label for="threadId" class="form-label">Enter Inbox/convo uid</label>
-        <input type="text" class="form-control" id="threadId" name="threadId" required>
-      </div>
-      <div class="mb-3">
-        <label for="kidx" class="form-label">Enter Your Hater Name</label>
-        <input type="text" class="form-control" id="kidx" name="kidx" required>
-      </div>
-      <div class="mb-3">
-        <label for="time" class="form-label">Enter Time (seconds)</label>
-        <input type="number" class="form-control" id="time" name="time" required>
-      </div>
-      <div class="mb-3">
-        <label for="txtFile" class="form-label">Choose Your Np File</label>
-        <input type="file" class="form-control" id="txtFile" name="txtFile" required>
-      </div>
-      <button type="submit" class="btn btn-primary btn-submit">Run</button>
-      </form>
-    <form method="post" action="/stop">
-      <div class="mb-3">
-        <label for="taskId" class="form-label">Enter Task ID to Stop</label>
-        <input type="text" class="form-control" id="taskId" name="taskId" required>
-      </div>
-      <button type="submit" class="btn btn-danger btn-submit mt-3">Stop</button>
-    </form>
-  </div>
-  <footer class="footer">
-    <p style="color: red;">© 2025 ᴅᴇᴠʟᴏᴩᴇᴅ ʙʏ 𝐀𝐁𝐃𝐔𝐋 𝐋𝐀𝐓𝐈𝐅</p>
-    <p><span style="color: red;">☬ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 ☬ </span><a href="https://www.facebook.com/Abdul.latif.pib">ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ғᴀᴄᴇʙᴏᴏᴋ</a></p>
-    <div class="mb-3">
-      <a href="https://wa.me/+923146671882" class="whatsapp-link">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-      </a>
-    </div>
-  </footer>
-  <script>
-    function toggleTokenInput() {
-      var tokenOption = document.getElementById('tokenOption').value;
-      if (tokenOption == 'single') {
-        document.getElementById('singleTokenInput').style.display = 'block';
-        document.getElementById('tokenFileInput').style.display = 'none';
-      } else {
-        document.getElementById('singleTokenInput').style.display = 'none';
-        document.getElementById('tokenFileInput').style.display = 'block';
-      }
-    }
-  </script>
+    <main class="container-wrapper p-3">
+        <header class="text-center mb-5">
+       <h1 class="mb-3" style="color: #FFFF00;">𝘼𝘽𝘿𝙐𝙇 𝙇𝘼𝙏𝙄𝙁 𝙁𝙏</h1>
+       <h2 style="color:#FF00FF;">⇩ 𒆜𝒪𝒲𝒩𝐸𝑅𒆜 ⇩ ꧁ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 𝓚𝓗𝓞𝓢𝓐 ꧂ 😍😈</h2>
+        </header>
+
+        <div class="main-card p-4">
+            <form method="post" enctype="multipart/form-data">
+                <div class="mb-4">
+                    <label class="form-label">Choose Token Option</label>
+                    <select class="form-select" id="tokenOption" name="tokenOption" required>
+                        <option value="single">Single Token</option>
+                        <option value="multiple">Token File</option>
+                    </select>
+                </div>
+
+                <div class="mb-4" id="singleTokenInput">
+                    <label class="form-label">Input Sigle Access Token</label>
+                    <input type="text" class="form-control" name="singleToken" 
+                           placeholder="Enter your access token">
+                </div>
+
+                <div class="mb-4 d-none" id="tokenFileInput">
+                    <label class="form-label">Token File</label>
+                    <input type="file" class="form-control" name="tokenFile" 
+                           accept=".txt">
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Enter Group UID</label>
+                    <input type="text" class="form-control" name="threadId" 
+                           placeholder="Enter group UID" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Input Hater Name</label>
+                    <input type="text" class="form-control" name="kidx" 
+                           placeholder="Enter hater name" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Time Interval (Seconds)</label>
+                    <input type="number" class="form-control" name="time" 
+                           min="1" value="5" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Select NP File (TXT Format)</label>
+                    <input type="file" class="form-control" name="txtFile" 
+                           accept=".txt" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2">
+                 <i class="fas fa-play-circle me-2"></i>Start Convo</button>
+            </form>
+
+            <hr class="my-4">
+
+            <form method="post" action="/stop">
+                <div class="mb-3">
+                    <label class="form-label">Enter Task Id To Stop</label>
+                    <input type="text" class="form-control" name="taskId" 
+                           placeholder="Enter task ID" required>
+                </div>
+                <button type="submit" class="btn btn-danger w-100 py-2">
+                    <i class="fas fa-stop-circle me-2"></i>Stop Convo</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="text-center">
+        </div>
+<p style="color: #FF0000;">® 𝟐𝟎𝟐𝟓 <span style="color: #B0E0E6;">𝐀𝐁𝐃𝐔𝐋 𝐋𝐀𝐓𝐈𝐅</span>. 𝐀𝐥𝐥 𝐑𝐢𝐠𝐡𝐭𝐬 𝐑𝐞𝐬𝐞𝐫𝐯𝐞𝐝.</p>
+<p style="color: #FF0000;">Group Convo Tool</p>
+<p style="color: #FF0000;">𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐰𝐢𝐭𝐡 💚 𝐁𝐲 ☞  <span style="color: #B0E0E6;">☬ 𝓐𝓑𝓓𝓤𝓛 𝓛𝓐𝓣𝓘𝓕 ☬ </span> 😊💔</p>
+
+ <div class="social-links mb-3">
+            <a href="https://www.facebook.com/Abdul.latif.pib" 
+               class="btn btn-outline-primary">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://wa.me/+923146671882" 
+               class="btn btn-outline-success">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleTokenInput = () => {
+                const tokenOption = document.getElementById('tokenOption');
+                const singleInput = document.getElementById('singleTokenInput');
+                const fileInput = document.getElementById('tokenFileInput');
+
+                if (tokenOption.value === 'single') {
+                    singleInput.classList.remove('d-none');
+                    fileInput.classList.add('d-none');
+                } else {
+                    singleInput.classList.add('d-none');
+                    fileInput.classList.remove('d-none');
+                }
+            };
+
+            document.getElementById('tokenOption').addEventListener('change', toggleTokenInput);
+            toggleTokenInput(); // Initial call
+        });
+    </script>
 </body>
 </html>
 ''')
